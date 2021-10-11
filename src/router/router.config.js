@@ -1,15 +1,18 @@
+import one from '../component/one'
+import two from '../component/two'
+import three from '../component/three'
 const routers = [
     {
         path: '/',
-        component: () => import('@/component/one')
+        component: one
     },
     {
         path: '/Two',
-        component: () => import('@/component/Two')
+        component: two
     },
     {
         path: '/Tree',
-        component: () => import('@/component/Three')
+        component: three
     }
 ]
 export default routers
