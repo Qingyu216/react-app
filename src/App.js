@@ -15,9 +15,11 @@ function App() {
                                 key={route.path}
                                 path={route.path}
                                 exact={route.exact}
-                                render={routeProps => {
-                                return <route.component {...routeProps} />
-                            }}
+                                render={
+                                    routeProps => {
+                                        return <route.component {...routeProps} />
+                                    }
+                                }
                             />
                         )
                     })

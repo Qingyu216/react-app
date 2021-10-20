@@ -11,7 +11,7 @@ function cancel(e) {
     message.error('Click on No');
 }
 
-function List() {
+function List(props) {
     const dataSource = [
         {
             id: '1',
@@ -129,7 +129,7 @@ function List() {
             key: 'id',
             width: 80,
             align: 'center',
-            render: (txt, record, index) => index + 1
+            render: (txt, record, index) => txt.id
         }, {
             title: '名字',
             dataIndex: 'name'
@@ -156,8 +156,8 @@ function List() {
         }
     ]
     return (
-        <Card title="商品列表" extra={<Button type="primary" size="small">新增</Button>}>
-            <Table dataSource={dataSource} columns={columns} bordered/>
+        <Card title="商品列表" extra={<Button type="primary" size="small" onClick={() => props.history.push('/admin/products/edit')}>新增</Button>}>
+            <Table dataSource={dataSource} columns={columns} bordered rowKey="id"/>
         </Card>
     )
 }

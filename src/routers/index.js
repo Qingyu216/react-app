@@ -27,7 +27,7 @@ export const adminRouters = [{
     title: '商品管理',
     icon: <ShoppingOutlined/>
 },{
-    path: '/admin/products/edit/:id',
+    path: '/admin/products/edit/:id?',
     component: Edit,
     isShow: false
 }]
